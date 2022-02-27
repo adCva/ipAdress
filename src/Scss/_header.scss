@@ -1,0 +1,18 @@
+.header-wrapper {
+    height: 250px;
+    background: url("../Assets/pattern-bg.png") center/cover no-repeat;
+    text-align: center;
+    padding-top: 4rem;
+
+    @media (min-width: 1200px) {
+        height: 350px;
+    }
+
+
+    h1 {
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: $fw-medium;
+        margin-bottom: 0.6rem;
+    }
+}

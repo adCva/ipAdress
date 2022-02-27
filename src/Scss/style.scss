@@ -1,0 +1,10 @@
+@import "config";
+@import "header";
+@import "details";
+
+body {
+    font-family: $ff-main;
+    font-size: $fs-default;
+    font-weight: $fw-regular;
+    color: $very-dark-gray;
+}
