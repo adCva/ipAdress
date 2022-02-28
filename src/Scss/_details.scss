@@ -5,5 +5,105 @@
     margin: -5rem auto 0;
     text-align: center;
     padding: 1rem 0;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 99;
+
+
+    .details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+
+        .details-box {
+            margin-bottom: 1.5rem;
+
+            &:last-of-type {
+                margin-bottom: 1rem;
+            }
+
+            @media screen and (min-width: 411px) {
+                margin-bottom: 1.4rem; 
+            }
+            @media screen and (min-width: 540px) {
+                margin-bottom: 1.6rem; 
+            }
+            @media screen and (min-width: 768px) {
+                display: inline-block;
+                margin-bottom: 0;
+                padding-right: 1.5rem;
+                border-right: 1px solid #afafaf;
+        
+                &:last-of-type {
+                    border-right: 0;
+                }
+            }
+            @media screen and (min-width: 1000px) {
+                padding-right: 3rem;
+            }
+            @media screen and (min-width: 1100px) {
+                padding-right: 4rem;
+            }
+            @media screen and (min-width: 1400px) {
+                padding-right: 5rem;
+            }
+
+
+            h2 {
+                margin-bottom: 0.35rem;
+                color: $medium-gray;
+                font-size: 0.55rem;
+                font-weight: $fw-bold;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+
+                @media screen and (min-width: 360px) {
+                    font-size: 0.6rem;
+                }
+            
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+
+            p {
+                color: $very-dark-gray;
+                font-size: 0.75rem;
+                letter-spacing: 0.2px;
+            
+                @media screen and (min-width: 360px) {
+                    font-size: 0.95rem;
+                }
+            
+                @media screen and (min-width: 411px) {
+                    font-size: 1.1rem;
+                }
+            
+                @media screen and (min-width: 768px) {
+                    font-size: 0.9rem;
+                }
+            
+                @media screen and (min-width: 900px) {
+                    font-size: 1rem;
+                }
+            
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.15rem;
+                }
+            
+                @media screen and (min-width: 1300px) {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
 }

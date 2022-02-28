@@ -13,6 +13,116 @@
         color: #ffffff;
         font-size: 1.2rem;
         font-weight: $fw-medium;
+        letter-spacing: 0.7px;
+        user-select: none;
         margin-bottom: 0.6rem;
+
+        @media screen and (min-width: 411px) {
+            font-size: 1.25rem;
+        }
+        @media screen and (min-width: 540px) {
+            font-size: 1.35rem;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        @media screen and (min-width: 1200px) {
+            font-size: 1.6rem;
+        }
+    }
+
+
+
+    .form-container {
+        width: 88%;
+        max-width: 600px;
+        margin: 1.2rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        input {
+            color: $very-dark-gray;
+            width: 80%;
+            height: 45px;
+            padding: 0 0.6rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.6px;
+            border: none;
+            outline: none;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            cursor: pointer;
+
+            @media screen and (min-width: 320px) {
+                height: 47px;
+            }
+            @media screen and (min-width: 411px) {
+                font-size: 0.9rem;
+                padding: 0 0.8rem;
+            }
+            @media screen and (min-width: 540px) {
+                height: 50px;
+                padding: 0 1rem;
+            }
+            @media screen and (min-width: 768px) {
+                height: 55px;
+            }
+            @media screen and (min-width: 1024px) {
+                width: 90.5%;
+            }
+        }
+
+
+        button {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            height: 45px;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+
+            &:hover {
+                background-color: $very-dark-gray;
+            }
+            &:focus {
+                background-color: #c8ff6b;
+                color: $very-dark-gray;
+            }
+
+            @media screen and (min-width: 320px) {
+                width: 15%;
+                height: 47.3px;
+            }
+        
+            @media screen and (min-width: 411px) {
+                width: 15%;
+            }
+        
+            @media screen and (min-width: 540px) {
+                width: 13%;
+                height: 50px;
+            }
+        
+            @media screen and (min-width: 768px) {
+                height: 55px;
+                font-size: 1.2rem;
+            }
+        
+            @media screen and (min-width: 1024px) {
+                width: 9.5%;
+                font-size: 1.3rem;
+            }
+        }
     }
 }
