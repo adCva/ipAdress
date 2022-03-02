@@ -7,7 +7,7 @@
 
 @media (min-width: 1200px) {
   .header-wrapper {
-    height: 350px;
+    height: 300px;
   }
 }
 
@@ -180,13 +180,30 @@
   background-color: #ffffff;
   width: 85%;
   max-width: 1200px;
-  margin: -5rem auto 0;
+  margin: 0 auto;
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0 1rem;
   border-radius: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 99;
+  position: absolute;
+  top: -15%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+@media (min-width: 768px) {
+  .details-wrapper {
+    top: -8%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .details-wrapper {
+    top: -12%;
+  }
 }
 
 .details-wrapper .details-container {
@@ -214,12 +231,15 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     text-align: left;
   }
 }
 
 .details-wrapper .details-container .details-box {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .details-wrapper .details-container .details-box:last-of-type {
@@ -228,13 +248,7 @@
 
 @media screen and (min-width: 411px) {
   .details-wrapper .details-container .details-box {
-    margin-bottom: 1.4rem;
-  }
-}
-
-@media screen and (min-width: 540px) {
-  .details-wrapper .details-container .details-box {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -242,7 +256,7 @@
   .details-wrapper .details-container .details-box {
     display: inline-block;
     margin-bottom: 0;
-    padding-right: 1.5rem;
+    padding: 0 1.5rem;
     border-right: 1px solid #afafaf;
   }
   .details-wrapper .details-container .details-box:last-of-type {
@@ -250,21 +264,15 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .details-wrapper .details-container .details-box {
-    padding-right: 3rem;
-  }
-}
-
 @media screen and (min-width: 1100px) {
   .details-wrapper .details-container .details-box {
-    padding-right: 4rem;
+    padding: 1rem 2rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .details-wrapper .details-container .details-box {
-    padding-right: 5rem;
+    padding: 1rem 4rem;
   }
 }
 
@@ -336,5 +344,26 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: #2b2b2b;
+}
+
+main {
+  position: relative;
+}
+
+.leaflet-container {
+  height: calc(100vh - 250px);
+  z-index: 1;
+}
+
+@media (orientation: landscape) {
+  .leaflet-container {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .leaflet-container {
+    height: calc(100vh - 300px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -8,3 +8,22 @@ body {
     font-weight: $fw-regular;
     color: $very-dark-gray;
 }
+
+
+main {
+  position: relative;
+}
+
+
+.leaflet-container {
+    height: calc(100vh - 250px);
+    z-index: 1;
+
+    @media (orientation:landscape) {
+      height: 250px;
+    }
+
+    @media (min-width: 1200px) {
+      height: calc(100vh - 300px);
+    }
+}

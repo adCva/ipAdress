@@ -6,7 +6,7 @@ function Details() {
         <div className="details-container">
             <div className="details-box">
                 <h2>IP Address</h2>
-                <p>198.12.212.111</p>
+                <p>192.212.174.101</p>
             </div>
             <div className="details-box">
                 <h2>Location</h2>
@@ -14,11 +14,11 @@ function Details() {
             </div>
             <div className="details-box">
                 <h2>Timezone</h2>
-                <p>UTC +03:00</p>
+                <p>UTC -05:00</p>
             </div>
             <div className="details-box">
                 <h2>ISP</h2>
-                <p>Internet Service Provider</p>
+                <p>SpaceX Starlink</p>
             </div>
         </div>
     </div>
