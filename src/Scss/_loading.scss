@@ -1,0 +1,18 @@
+.loader {
+  font-size: 60px;
+
+  &::after {
+    content: '.....';
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    animation: dots steps(4, end) 2s infinite;
+    width: 0px;
+  }
+}
+
+@keyframes dots {
+  to {
+    width: 1em;
+  }
+}

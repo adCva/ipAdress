@@ -339,6 +339,32 @@
   }
 }
 
+.loader {
+  font-size: 60px;
+}
+
+.loader::after {
+  content: '.....';
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  -webkit-animation: dots steps(4, end) 2s infinite;
+          animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@-webkit-keyframes dots {
+  to {
+    width: 1em;
+  }
+}
+
+@keyframes dots {
+  to {
+    width: 1em;
+  }
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
