@@ -7,22 +7,22 @@ function Details() {
     const loading = useSelector(state => state.location.loading);
 
     return (
-        <div className="details-wrapper">
+        <div className={loading ? "details-wrapper details-wrapper-loading" : "details-wrapper"}>
             {loading ? (
                 <Loading />
             ) : (
                 <div className="details-container">
                     <div className="details-box">
                         <h2>IP Address</h2>
-                        <p>{locationData.ipAddress}</p>
+                        <p>{locationData.ip}</p>
                     </div>
                     <div className="details-box">
                         <h2>Location</h2>
-                        <p>{locationData.city}</p>
+                        <p>{locationData.location.region}, {locationData.location.country}</p>
                     </div>
                     <div className="details-box">
                         <h2>Timezone</h2>
-                        <p>{locationData.timezone}</p>
+                        <p>{locationData.location.timezone}</p>
                     </div>
                     <div className="details-box">
                         <h2>ISP</h2>

@@ -5,12 +5,15 @@ export const locationSlice = createSlice({
     initialState: {
         loading: false,
         locationData: {data: {
-                lat: 40.6375,
-                lng: -74.0216,
-                ipAddress: "192.212.174.101",
-                city: "Brooklyn, NY",
-                timezone: "UTC -05:00",
-                isp: "SpaceX Starlink"
+                ip: "192.212.174.101",
+                isp: "SpaceX Starlink",
+                location: {
+                    region: "Brooklyn",
+                    country: "US",
+                    timezone: "-05:00",
+                    lat: "40.6375",
+                    lng: "-74.0216"
+                }
             }
         }
     },
@@ -21,6 +24,7 @@ export const locationSlice = createSlice({
         },
         updateLocationData: (state, action) => {
             const newData = {data: action.payload.data}
+            console.log(newData);
 
             return {
                 ...state,

@@ -6,7 +6,7 @@ import { updateLocationData } from  "./locationSlice";
 export const getNewLocation = createAsyncThunk(
     "locationMiddleware/getNewLocation",
     async ({ip}, { dispatch }) => {
-        return fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_k9o3bu1SPH8OMYBms9tK7oPXDJ4DS&ipAddress=${ip}`)
+        return fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_DfnOlRlJmxVwTV12rqGGIekUobZdC&ipAddress=${ip}`)
         .then((res) => res.json()).then(resData => dispatch(updateLocationData({data: resData})))
         .catch((err) => console.log(err))
     }

@@ -24,7 +24,10 @@ main {
       height: 250px;
     }
 
+    @media (min-width: 768px) {
+      height: calc(100vh - 250px);
+    }
     @media (min-width: 1200px) {
-      height: calc(100vh - 300px);
+      height: calc(100vh - 280px);
     }
 }
