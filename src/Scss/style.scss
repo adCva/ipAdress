@@ -2,6 +2,8 @@
 @import "header";
 @import "details";
 @import "loading";
+@import "error";
+
 
 body {
     font-family: $ff-main;
@@ -10,18 +12,18 @@ body {
     color: $very-dark-gray;
 }
 
-
 main {
   position: relative;
 }
 
 
+// ================== Leaflet container.
 .leaflet-container {
     height: calc(100vh - 250px);
     z-index: 1;
 
     @media (orientation:landscape) {
-      height: 250px;
+      height: 450px;
     }
 
     @media (min-width: 768px) {

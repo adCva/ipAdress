@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
-import { FaChevronRight } from "react-icons/fa";
+// ========= Redux.
 import { useDispatch } from 'react-redux';
 import { startLoading } from "../Features/locationSlice";
 import { getNewLocation } from "../Features/middleware";
+// ========= React Icons.
+import { FaChevronRight } from "react-icons/fa";
+
 
 function Header() {
+  // ========= Local state & dispatch.
   const dispatch = useDispatch();
   const [ inputAddress, setInputAddress ] = useState("");
 
-
+  // ========= Handle input change.
   const handleChange = (e) => {
     setInputAddress(e.target.value);
   };
 
-  const getIpAddressData = (e) => {
-    e.preventDefault();
+  // ========= Dispatch middleware.
+  const getIpAddressData = (event) => {
+    event.preventDefault();
     dispatch(startLoading());
     dispatch(getNewLocation({ip: inputAddress}));
   }
 
+  
   return (
     <div className="header-wrapper">
         <h1>IP Address Tracker</h1>

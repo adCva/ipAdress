@@ -1,8 +1,9 @@
+import './Reset.css';
+import './Scss/style.css';
+// ========= Components.
 import Details from './Components/Details';
 import Header from './Components/Header';
 import Map from './Components/Map';
-import './Reset.css';
-import './Scss/style.css';
 
 
 function App() {

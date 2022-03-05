@@ -1,14 +1,18 @@
 import React from 'react';
+// ========= Leaflet.
 import { MapContainer, TileLayer} from "react-leaflet";
 import { Icon } from "leaflet";
 import markerIcon from "../Assets/marker.svg";
 import MapMarker from "./MapMarker";
+// ========= Redux.
 import { useSelector } from 'react-redux';
 
 
 function Map() {
+  // ========= Redux state.
   const locationData = useSelector(state => state.location.locationData.data);
 
+  // ========= Marker.
   const marker = new Icon({
     iconUrl: markerIcon,
     iconSize: [50, 60]

@@ -1,6 +1,6 @@
 .details-wrapper {
     position: absolute;
-    top: -22%;
+    top: -90px;
     right: 50%;
     transform: translateX(50%);
     z-index: 99;
@@ -8,42 +8,48 @@
     width: 85%;
     max-width: 1300px;
     text-align: center;
-    //padding: 2rem 0 1rem;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+    @media (min-width: 411px) {
+        top: -95px;
+    }
     @media (min-width: 768px) {
         width: 95%;
-        top: -6.5%;
-    }
-    @media (min-width: 1000px) {
-        width: 95%;
-        top: -10%;
+        top: -55px;
     }
     @media (min-width: 1200px) {
         width: 60%;
-        top: -9%;
     }
 
-    
+
+    // ================== Container.
     .details-container {
-        display: flex;
-        flex-direction: column;
-        padding: 2.5rem 0;
+        position: relative;
 
-        @media (min-width: 768px) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            text-align: left;
-            padding: 2rem 1.5rem;
+        .boxes-show {
+            display: flex;
+            flex-direction: column;
+            padding: 2.5rem 0;
+    
+            @media (min-width: 768px) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-align: left;
+                padding: 2.2rem 1.5rem;
+            }
+            @media (min-width: 1200px) {
+                padding: 2.2rem 3rem;
+            }
         }
-        @media (min-width: 1200px) {
-            padding: 2rem 3rem;
+
+        .boxes-hide {
+            display: none;
         }
 
 
-
+        // ================== Info box.
         .details-box {
             margin-bottom: 2.5rem;
             &:last-of-type {
@@ -65,7 +71,6 @@
             @media (min-width: 1400px) {
                 padding-left: 5rem;
             }
-
 
 
             h2 {
@@ -94,59 +99,32 @@
                 }
             }
         }
-    }
-}
 
 
-.details-wrapper-loading {
-    padding: 1rem 0 2rem;
-}
+        // ================== Arrow button.
+        .show-btn {
+            position: relative;
+            background: none;
+            color: #1d3557;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            font-size: 32px;
 
-
-
-
-/*
-.details-wrapper {
-
-    
-    .details-container {
-        
-        justify-content: center;
-        align-items: center;
-
-
-        .details-box {
-
-            h2 {
-                @media screen and (min-width: 360px) {
-                    font-size: 0.6rem;
-                }
-            
-                @media screen and (min-width: 768px) {
-                    margin-bottom: 0.5rem;
-                }
+            @media (min-width: 768px) {
+                display: none;
             }
+        }
 
-
-            p {
-            
-                @media screen and (min-width: 768px) {
-                    font-size: 0.9rem;
-                }
-            
-                @media screen and (min-width: 900px) {
-                    font-size: 1rem;
-                }
-            
-                @media screen and (min-width: 1024px) {
-                    font-size: 1.15rem;
-                }
-            
-                @media screen and (min-width: 1300px) {
-                    font-size: 1.3rem;
-                }
-            }
+        .show-btn-up {
+            padding: 0 0 0.7rem;
+        }
+        .show-btn-down {
+            padding: 1rem 0 0.7rem;
         }
     }
 }
-*/
+
+.details-wrapper-loading {
+    padding: 0 0 0.5rem;
+}

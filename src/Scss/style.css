@@ -8,6 +8,7 @@
 @media (min-width: 1200px) {
   .header-wrapper {
     height: 280px;
+    padding-top: 4rem;
   }
 }
 
@@ -37,7 +38,7 @@
 
 @media screen and (min-width: 1200px) {
   .header-wrapper h1 {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
   }
 }
 
@@ -134,7 +135,7 @@
 }
 
 .header-wrapper .form-container button:hover {
-  background-color: #2b2b2b;
+  background-color: #454545;
 }
 
 @media screen and (min-width: 320px) {
@@ -166,7 +167,7 @@
 
 .details-wrapper {
   position: absolute;
-  top: -22%;
+  top: -90px;
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
@@ -180,28 +181,30 @@
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 411px) {
   .details-wrapper {
-    width: 95%;
-    top: -6.5%;
+    top: -95px;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .details-wrapper {
     width: 95%;
-    top: -10%;
+    top: -55px;
   }
 }
 
 @media (min-width: 1200px) {
   .details-wrapper {
     width: 60%;
-    top: -9%;
   }
 }
 
 .details-wrapper .details-container {
+  position: relative;
+}
+
+.details-wrapper .details-container .boxes-show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +216,7 @@
 }
 
 @media (min-width: 768px) {
-  .details-wrapper .details-container {
+  .details-wrapper .details-container .boxes-show {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -225,14 +228,18 @@
         -ms-flex-align: start;
             align-items: flex-start;
     text-align: left;
-    padding: 2rem 1.5rem;
+    padding: 2.2rem 1.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .details-wrapper .details-container {
-    padding: 2rem 3rem;
+  .details-wrapper .details-container .boxes-show {
+    padding: 2.2rem 3rem;
   }
+}
+
+.details-wrapper .details-container .boxes-hide {
+  display: none;
 }
 
 .details-wrapper .details-container .details-box {
@@ -297,55 +304,34 @@
   }
 }
 
+.details-wrapper .details-container .show-btn {
+  position: relative;
+  background: none;
+  color: #1d3557;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  .details-wrapper .details-container .show-btn {
+    display: none;
+  }
+}
+
+.details-wrapper .details-container .show-btn-up {
+  padding: 0 0 0.7rem;
+}
+
+.details-wrapper .details-container .show-btn-down {
+  padding: 1rem 0 0.7rem;
+}
+
 .details-wrapper-loading {
-  padding: 1rem 0 2rem;
+  padding: 0 0 0.5rem;
 }
 
-/*
-.details-wrapper {
-
-    
-    .details-container {
-        
-        justify-content: center;
-        align-items: center;
-
-
-        .details-box {
-
-            h2 {
-                @media screen and (min-width: 360px) {
-                    font-size: 0.6rem;
-                }
-            
-                @media screen and (min-width: 768px) {
-                    margin-bottom: 0.5rem;
-                }
-            }
-
-
-            p {
-            
-                @media screen and (min-width: 768px) {
-                    font-size: 0.9rem;
-                }
-            
-                @media screen and (min-width: 900px) {
-                    font-size: 1rem;
-                }
-            
-                @media screen and (min-width: 1024px) {
-                    font-size: 1.15rem;
-                }
-            
-                @media screen and (min-width: 1300px) {
-                    font-size: 1.3rem;
-                }
-            }
-        }
-    }
-}
-*/
 .loader {
   font-size: 65px;
 }
@@ -371,6 +357,24 @@
   }
 }
 
+.error-container {
+  color: #e63946;
+  padding: 2.5rem 1rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .error-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .error-container {
+    padding: 2rem 3rem;
+  }
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
@@ -389,7 +393,7 @@ main {
 
 @media (orientation: landscape) {
   .leaflet-container {
-    height: 250px;
+    height: 450px;
   }
 }
 

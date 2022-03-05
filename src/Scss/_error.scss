@@ -1,0 +1,12 @@
+.error-container {
+    color: #e63946;
+    padding: 2.5rem 1rem;
+    line-height: 1.5;
+
+    @media (min-width: 768px) {
+        padding: 2rem 1.5rem;
+    }
+    @media (min-width: 1200px) {
+        padding: 2rem 3rem;
+    }
+}

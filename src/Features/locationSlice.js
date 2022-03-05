@@ -4,6 +4,7 @@ export const locationSlice = createSlice({
     name: "locationSlice",
     initialState: {
         loading: false,
+        error: false,
         locationData: {data: {
                 ip: "192.212.174.101",
                 isp: "SpaceX Starlink",
@@ -22,13 +23,18 @@ export const locationSlice = createSlice({
         startLoading: state => {
             state.loading = true
         },
+        updateError: state => {
+            state.loading = false
+            state.error = true
+
+        },
         updateLocationData: (state, action) => {
             const newData = {data: action.payload.data}
-            console.log(newData);
 
             return {
                 ...state,
                 loading: false,
+                error: false,
                 locationData: newData
             }
         }
@@ -36,6 +42,6 @@ export const locationSlice = createSlice({
 })
 
 
-export const { startLoading, updateLocationData } = locationSlice.actions;
+export const { startLoading, updateError, updateLocationData } = locationSlice.actions;
 
 export default locationSlice.reducer;
