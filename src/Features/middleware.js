@@ -1,12 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { updateLocationData, updateError } from  "./locationSlice";
+let apiKey = "at_DfnOlRlJmxVwTV12rqGGIekUobZdC";
 
 
 // ========= The thunk.
 export const getNewLocation = createAsyncThunk(
     "locationMiddleware/getNewLocation",
     async ({ip}, { dispatch }) => {
-        return fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_DfnOlRlJmxVwTV12rqGGIekUobZdC&ipAddress=${ip}`)
+        return fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ip}`)
             .then((response) => {
                 if(!response.ok) {
                     dispatch(updateError())
