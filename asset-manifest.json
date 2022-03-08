@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ipAdress/static/css/main.080710d5.css",
-    "main.js": "/ipAdress/static/js/main.65a6d724.js",
+    "main.js": "/ipAdress/static/js/main.5eda0424.js",
     "static/media/pattern-bg.png": "/ipAdress/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
     "index.html": "/ipAdress/index.html",
     "static/media/marker.svg": "/ipAdress/static/media/marker.7e6459d2a9278295ae782e100965be4b.svg",
     "main.080710d5.css.map": "/ipAdress/static/css/main.080710d5.css.map",
-    "main.65a6d724.js.map": "/ipAdress/static/js/main.65a6d724.js.map"
+    "main.5eda0424.js.map": "/ipAdress/static/js/main.5eda0424.js.map"
   },
   "entrypoints": [
     "static/css/main.080710d5.css",
-    "static/js/main.65a6d724.js"
+    "static/js/main.5eda0424.js"
   ]
 }
