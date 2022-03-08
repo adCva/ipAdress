@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { updateLocationData, updateError } from  "./locationSlice";
-let apiKey = "at_DfnOlRlJmxVwTV12rqGGIekUobZdC";
+let apiKey = process.env.REACT_APP_API_KEY;
 
 
 // ========= The thunk.
